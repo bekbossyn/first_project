@@ -3,5 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello World")
+    my_dict = {"sample_variable": "hello index", }
+    return render(request, 'first_app/index.html', context=my_dict)
+
 
